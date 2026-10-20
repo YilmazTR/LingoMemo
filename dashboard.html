@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LingoMemo Dashboard</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #F0F4F8; margin: 0; padding: 20px; color: #2C3E50; }
+        .container { max-width: 800px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 30px; }
+        h1 { color: #4A90E2; font-size: 32px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
+        .stat-card { background: white; padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .stat-card .value { font-size: 32px; font-weight: 800; color: #4A90E2; }
+        .stat-card .label { font-size: 14px; color: #7F8C8D; text-transform: uppercase; margin-top: 5px; }
+        .list-section { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        h2 { font-size: 20px; border-bottom: 2px solid #F0F4F8; padding-bottom: 10px; margin-top: 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid #F0F4F8; }
+        .badge { padding: 4px 8px; border-radius: 5px; font-size: 12px; font-weight: bold; }
+        .badge-success { background: #E8F8F5; color: #2ECC71; }
+        .badge-error { background: #FDEDEC; color: #E74C3C; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header><h1>📊 Learning Progress</h1></header>
+        <div class="stats-grid">
+            <div class="stat-card"><div id="stat-total" class="value">0</div><div class="label">Total Words</div></div>
+            <div class="stat-card"><div id="stat-accuracy" class="value">0%</div><div class="label">Accuracy</div></div>
+            <div class="stat-card"><div id="stat-mastery" class="value">0</div><div class="label">Mastered (10+)</div></div>
+        </div>
+        <div class="list-section">
+            <h2>⚠️ Needs Attention (Most Wrong)</h2>
+            <table id="struggle-table">
+                <thead><tr><th>Word</th><th>Translation</th><th>Wrong</th><th>Correct</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

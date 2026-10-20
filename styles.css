@@ -1,0 +1,165 @@
+
+/* Global Variables */
+:root {
+    --lmemo-primary: #4A90E2;
+    --lmemo-success: #2ECC71;
+    --lmemo-error: #E74C3C;
+    --lmemo-text: #2C3E50;
+    --lmemo-text-light: #7F8C8D;
+    --lmemo-bg: #FFFFFF;
+    --lmemo-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Tooltip Card Design */
+#lingomemo-tooltip {
+    position: absolute;
+    z-index: 999999;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.lmemo-card {
+    background: var(--lmemo-bg);
+    border-radius: 16px;
+    width: 280px;
+    box-shadow: var(--lmemo-shadow);
+    overflow: hidden;
+    border: 1px solid #ECEFF1;
+}
+
+.lmemo-header {
+    background: #F8F9FA;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ECEFF1;
+}
+
+.lmemo-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--lmemo-text);
+    letter-spacing: 0.5px;
+}
+
+#lmemo-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #BDC3C7;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+#lmemo-close:hover { color: var(--lmemo-error); }
+
+.lmemo-content { padding: 16px; }
+
+.lmemo-row { display: flex; flex-direction: column; margin-bottom: 12px; }
+
+.lmemo-tag {
+    font-size: 10px;
+    font-weight: 700;
+    color: #BDC3C7;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.lmemo-val {
+    font-size: 15px;
+    color: var(--lmemo-text);
+    line-height: 1.4;
+}
+
+.lmemo-tr .lmemo-val {
+    color: var(--lmemo-success);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.lmemo-divider {
+    height: 1px;
+    background: #F1F3F4;
+    margin: 8px 0;
+}
+
+.lmemo-ex {
+    font-size: 13px;
+    color: var(--lmemo-text-light);
+    font-style: italic;
+    padding-left: 8px;
+    border-left: 3px solid #D5DBDB;
+    margin-top: 8px;
+}
+
+.lmemo-footer { padding: 0 16px 16px 16px; }
+
+#lmemo-save {
+    width: 100%;
+    padding: 10px;
+    background: var(--lmemo-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(74, 144, 226, 0.2);
+    transition: transform 0.1s, background 0.2s;
+}
+
+#lmemo-save:active { transform: scale(0.98); }
+#lmemo-save:hover { background: #357ABD; }
+
+/* Loader & States */
+.lmemo-loader-container {
+    padding: 20px;
+    text-align: center;
+    color: var(--lmemo-text-light);
+}
+
+.lmemo-spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #F3F3F3;
+    border-top: 3px solid var(--lmemo-primary);
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+.lmemo-success-card {
+    text-align: center;
+    padding: 20px;
+    color: var(--lmemo-success);
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.success-icon { font-size: 32px; margin-bottom: 8px; }
+
+@keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.lmemo-error-card {
+    padding: 20px;
+    text-align: center;
+}
+
+.lmemo-error-card button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+}

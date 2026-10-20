@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LingoMemo Quiz</title>
+    <style>
+        :root {
+            --primary: #4A90E2;
+            --success: #2ECC71;
+            --error: #E74C3C;
+            --bg: #F0F4F8;
+            --text: #2C3E50;
+        }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: var(--bg); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+        #quiz-container { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 24px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1); 
+            width: 450px; 
+            text-align: center; 
+            position: relative;
+        }
+        h1 { color: var(--primary); font-size: 28px; margin-bottom: 30px; }
+        #question { font-size: 22px; font-weight: 600; margin-bottom: 30px; color: var(--text); line-height: 1.4; }
+        
+        .option-btn { 
+            display: block; 
+            width: 100%; 
+            padding: 16px; 
+            margin: 12px 0; 
+            border: 2px solid #EDF2F7; 
+            border-radius: 14px; 
+            background: white; 
+            cursor: pointer;             
+            font-size: 18px; 
+            font-weight: 500;
+            color: var(--text);
+            transition: all 0.2s ease; 
+        }
+        
+        .option-btn:hover { 
+            background: #F7FAFC; 
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .option-btn.correct { 
+            background: var(--success) !important; 
+            color: white !important; 
+            border-color: #27AE60 !important; 
+            animation: bounce 0.5s ease;
+        }
+
+        .option-btn.wrong { 
+            background: var(--error) !important; 
+            color: white !important; 
+            border-color: #C0392B !important; 
+            animation: shake 0.4s ease;
+        }
+
+        #feedback { height: 40px; margin-top: 20px; font-size: 18px; font-weight: bold; }
+        
+        button#next-btn { 
+            margin-top: 25px; 
+            padding: 14px 40px; 
+            background: var(--primary); 
+            color: white; 
+            border: none; 
+            border-radius: 30px; 
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer; 
+            display: none;
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>🧠 LingoMemo Quiz</h1>
+        <div id="question">Loading your challenge...</div>
+        <div id="options-container"></div>
+        <div id="feedback"></div>
+        <button id="next-btn">Next Question ➔</button>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
