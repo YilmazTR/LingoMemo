@@ -1,5 +1,5 @@
 
-# 📚 LingoMemo: Your AI-Powered English Learning Companion
+# LingoMemo: Your AI-Powered English Learning Companion
 
 ![Version](https://img.shields.io/badge/version-1.2-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -9,24 +9,24 @@
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 🔍 1. Instant Vocabulary Capture
+### 1. Instant Vocabulary Capture
 Don't let new words slip away! Click on any word while browsing to trigger a sleek, modern tooltip that provides:
 - **Turkish Translation** (Powered by MyMemory API)
 - **English Definition** (Powered by Free Dictionary API)
 - **Contextual Examples** to help you understand usage.
 
-### 📓 2. Intelligent Digital Notebook
+### 2. Intelligent Digital Notebook
 Save words with a single click! Every word is stored in your local Chrome storage, creating a personalized dictionary that grows with you.
 
-### 🧠 3. Gamified Quiz System
+### 3. Gamified Quiz System
 Test your knowledge with our built-in Quiz Engine. 
 - **Smart Distractors:** The engine picks wrong answers from your *own* saved words to challenge you.
 - **Interactive Feedback:** Enjoy satisfying animations (bounce/shake) when answering.
 - **Track Progress:** See your success rate and identify which words need more attention.
 
-### 📊 4. Progress Dashboard
+### 4. Progress Dashboard
 Visualize your learning journey! Our dashboard provides:
 - **Accuracy Tracking:** Your overall percentage of correct answers.
 - **Mastery Stats:** See how many words you have truly mastered.
@@ -34,7 +34,7 @@ Visualize your learning journey! Our dashboard provides:
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 1. **Download the Repository:**
    ```bash
@@ -48,15 +48,15 @@ Visualize your learning journey! Our dashboard provides:
 
 ---
 
-## 🛠️ Built With
+## Built With
 - **JavaScript (ES6+)**
 - **Chrome Extension API (Manifest V3)**
 - **MyMemory API** & **Free Dictionary API**
 
 ---
 
-## 📄 License
+## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
-*Developed with ❤️ by LingoMemo Team*
+*Developed with ❤️ by Yilmaz*
